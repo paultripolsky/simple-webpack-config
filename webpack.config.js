@@ -18,6 +18,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: ['@babel/polyfill', './index.js'],
+    devtool: 'source-map',
     output: {
         filename: function () {
             if (isDev) {
