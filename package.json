@@ -28,8 +28,10 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/node": "^7.16.5",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.5",
     "babel-loader": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
     "browser-sync-webpack-plugin": "^2.3.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.1.0",

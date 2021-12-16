@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+require("@babel/polyfill");
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
@@ -14,7 +15,7 @@ console.log('IS DEV', isDev);
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: './index.js',
+    entry: ['@babel/polyfill', './index.js'],
     output: {
         filename: function () {
             if (isDev) {
